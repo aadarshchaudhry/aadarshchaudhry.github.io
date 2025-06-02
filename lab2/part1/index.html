@@ -2,9 +2,16 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8">
+      <!--
+	Name: Aadarsh Chaudhry
+	File: filename.html
+	Date: 5th June 2025
+	A very brief description of the file : In this task we ahve to make a website on which we have to insert a video
+                                         file and some pictures also.
+	-->
     <meta name="viewport" content="width=device-width">
-    <title>Mozilla splash page</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <title>INFT1206 - Lab 2 Part 1 - Mozilla splash page</title>
+    <link href='https://www.youtube.com/watch?v=ojcNcvb1olg' rel='stylesheet' type='text/css'>
     <style>
       /* header and body setup */
 
@@ -99,15 +106,22 @@
   <body>
     <header>
       <h1>Mozilla</h1>
+      <img
+      class="fit-picture"
+      src="./images/firefox_logo-only_RGB.png"
+      alt= "firefox">
       <!-- insert <img> element, link to the small
           version of the Firefox logo -->
+
 
     </header>
 
     <main>
       <article>
         <!-- insert iframe from youtube -->
-
+        <div class= "video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ojcNcvb1olg?si=ii5eKd_GZWfq9HZq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
         <h2>Rocking the free web</h2>
 
         <p>Mozilla are a global community of technologists, thinkers, and builders, working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
@@ -118,23 +132,34 @@
       <div class="further-info">
         <!-- insert images with srcsets and sizes -->
         <a href="https://www.mozilla.org/en-US/firefox/new/">
+          <img src="./images/firefox_logo-only_RGB.png" 
+          alt = "firefox"></a>
           <img>
         </a>
         <a href="https://www.mozilla.org/">
+          <img src="./images/mozilla-dinosaur-head.png" 
+          alt = "Mozilla"></a>
           <img>
         </a>
         <a href="https://addons.mozilla.org/">
+          <img src="./images/firefox-addons.jpg" 
+          alt = "Add-ons"></a>
           <img>
         </a>
         <a href="https://developer.mozilla.org/en-US/">
+          <img src="./images/mdn.svg" 
+          alt = "Developer"></a>
           <img>
         </a>
         <div class="clearfix"></div>
       </div>
 
       <div class="red-panda">
-        <!-- insert picture element -->
-      </div>
+       <picture>
+          <source media="(min-width:600px)" srcset="./images/red-panda-1200.jpg">
+          <img src="./images/red-panda-400.jpg" alt="Red Panda in a Tree" style="width:auto;">
+    </picture>
+</div>
 
     </main>
   </body>
