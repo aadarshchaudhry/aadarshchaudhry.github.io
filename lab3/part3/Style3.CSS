@@ -48,5 +48,8 @@ header, footer {
   border-top: 5px solid #a66;
   border-bottom: 5px solid #a66;
 }
+header {
+  text-align: center;
+}
 
 /* WRITE YOUR CODE BELOW HERE */
