@@ -8,17 +8,17 @@ body {
   margin: 0 auto;
   min-width: 1000px;
   max-width: 1400px;
-  font-family: sans-serif;
-
+  font-family: 'Crimson Text', serif;
 }
 
 /* Layout */
-main::after{
-    content: "";
+
+main::after {
+  content: "";
   display: table;
   clear: both;
-
 }
+
 section {
   float: left;
   width: 50%;
@@ -27,7 +27,6 @@ section {
 aside {
   float: left;
   width: 30%;
-  
 }
 
 nav {
@@ -39,35 +38,55 @@ footer {
   clear: both;
 }
 
-header, section, aside, nav, footer, main{
+header,
+section,
+aside,
+nav,
+footer,
+main {
   padding: 20px;
 }
 
-/* header and footer */
+/* Header and Footer Styling */
 
-header, footer {
+header,
+footer {
   border-top: 5px solid #a66;
   border-bottom: 5px solid #a66;
 }
-/* WRITE YOUR CODE BELOW HERE */
+
 header {
   text-align: center;
 }
 
+/* Navigation styling for vertical layout with adequate height */
+
 .nav-box {
   border: 1px solid #a66;
   color: #a66;
-  padding: 20px;
+  padding: 25px 15px;      
+  margin: 12px 0;          
   text-align: center;
-  margin: 10px 0;
   font-size: 1.1rem;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 70px;
+}
+
+/* Text styling */
+
+a {
+  color: #a66;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #a66;
+  text-decoration: underline;
 }
 
 aside ul li a {
-  color: #a66;
-}
-
-a {
   color: #a66;
 }
 
@@ -83,13 +102,10 @@ section ol {
   list-style-type: lower-alpha;
 }
 
-body {
-  font-family: 'Crimson Text', serif;
+aside ul li a {
+  color: #a66;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lato', sans-serif;
-  font-weight: 700; /* Bold heading weight */
 }
-
-
