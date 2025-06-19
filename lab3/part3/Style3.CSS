@@ -27,6 +27,7 @@ section {
 aside {
   float: left;
   width: 30%;
+  
 }
 
 nav {
@@ -61,3 +62,34 @@ header {
   margin: 10px 0;
   font-size: 1.1rem;
 }
+
+aside ul li a {
+  color: #a66;
+}
+
+a {
+  color: #a66;
+}
+
+aside ul {
+  list-style-type: square;
+}
+
+section ul {
+  list-style-type: square;
+}
+
+section ol {
+  list-style-type: lower-alpha;
+}
+
+body {
+  font-family: 'Crimson Text', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700; /* Bold heading weight */
+}
+
+
