@@ -76,14 +76,14 @@ header {
 
 /* Text styling */
 
-a {
+nav a {
   color: #a66;
   text-decoration: none;
+  
 }
 
 a:hover {
   color: #a66;
-  text-decoration: underline;
 }
 
 aside ul li a {
@@ -109,3 +109,20 @@ aside ul li a {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lato', sans-serif;
 }
+
+a[href^="https://en.wikipedia.org"]::after {
+  content: "";
+  display: inline-block;
+  background: url('images/external-link-52.png') no-repeat center center;
+  background-size: contain;
+  width: 12px;
+  height: 12px;
+  margin-left:4px;
+  color: #a66;
+}
+
+a[href^="http"] {
+  color: #a66;
+  text-decoration: underline;
+}
+
