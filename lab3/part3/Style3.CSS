@@ -48,8 +48,16 @@ header, footer {
   border-top: 5px solid #a66;
   border-bottom: 5px solid #a66;
 }
+/* WRITE YOUR CODE BELOW HERE */
 header {
   text-align: center;
 }
 
-/* WRITE YOUR CODE BELOW HERE */
+.nav-box {
+  border: 1px solid red;
+  color: red;
+  padding: 20px;
+  text-align: center;
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
