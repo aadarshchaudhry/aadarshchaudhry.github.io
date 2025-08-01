@@ -77,6 +77,7 @@ class Ball {
   }
 }
 
+// Create an array to hold the ball
 const balls = [];
 
 while (balls.length < 25) {
@@ -92,13 +93,14 @@ while (balls.length < 25) {
     size
   );
 
-  balls.push(ball);
+  balls.push(ball);  // Add the new balls to array
 }
 
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
 
+  // Draw, update, & handle the collision for the ball
   for (const ball of balls) {
     ball.draw();
     ball.update();
