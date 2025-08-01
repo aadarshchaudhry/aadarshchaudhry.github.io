@@ -23,7 +23,7 @@ for (const image of images) {
   newImage.setAttribute('alt', alts[image]);
   thumbBar.appendChild(newImage);
   newImage.addEventListener('click', e => {
-    displayedImage.src = e.target.src;
+    displayedImage.src = e.target.sr;
     displayedImage.alt = e.target.alt;
   });
 }
