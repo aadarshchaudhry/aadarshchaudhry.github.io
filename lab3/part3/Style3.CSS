@@ -1,113 +1,122 @@
-/* General setup */
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0 auto;
-  min-width: 1000px;
-  max-width: 1400px;
-  font-family: 'Crimson Text', serif;
-}
-
-/* Layout */
-
-main::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-section {
-  float: left;
-  width: 50%;
-}
-
-aside {
-  float: left;
-  width: 30%;
-}
-
-nav {
-  float: left;
-  width: 20%;
-}
-
-footer {
-  clear: both;
-}
-
-header,
-section,
-aside,
-nav,
-footer,
 main {
-  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
 }
-
-/* Header and Footer Styling */
-
 header,
 footer {
   border-top: 5px solid #a66;
   border-bottom: 5px solid #a66;
 }
 
-header {
-  text-align: center;
+section {
+  width: 50%;
+  padding-right: 30px;
 }
 
-/* Navigation styling for vertical layout with adequate height */
-
-.nav-box {
-  border: 1px solid #a66;
-  color: #a66;
-  padding: 25px 15px;      
-  margin: 12px 0;          
-  text-align: center;
-  font-size: 1.1rem;
-  font-family: 'Lato', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  height: 70px;
+aside {
+  width: 30%;
+  padding-left: 30px;
 }
-
-/* Text styling */
-
-nav a {
+aside a {
   color: #a66;
   text-decoration: none;
-  
 }
 
-a:hover {
-  color: #a66;
+aside a:hover {
+  text-decoration: underline;
 }
 
-aside ul li a {
+nav {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding-left: 30px;
+  gap: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-box {
+  display: block;
+  padding: 20px 10px;
+
+  text-align: center;
+  border: 1px solid #a66;
+  margin-bottom: 15px;
   color: #a66;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.nav-box:hover {
+  background-color: #f9eaea;
+  cursor: pointer;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 25px 0;
+  text-align: center;
+}
+
+
+section h2,
+aside h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+section p,
+section ul,
+section ol,
+aside ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 aside ul {
+  padding-left: 20px;
   list-style-type: square;
 }
 
-section ul {
+aside ul li {
+  margin-bottom: 5px;
   list-style-type: square;
+}
+aside ul li a {
+  color: #a66;
+  text-decoration: none;
 }
 
 section ol {
   list-style-type: lower-alpha;
 }
-
-aside ul li a {
+section ul {
+  list-style-type: square;
+}
+section a {
   color: #a66;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lato', sans-serif;
+section a:hover {
+  text-decoration: none; 
 }
 
 a[href^="https://en.wikipedia.org"]::after {
@@ -117,12 +126,5 @@ a[href^="https://en.wikipedia.org"]::after {
   background-size: contain;
   width: 12px;
   height: 12px;
-  margin-left:4px;
-  color: #a66;
+  margin-left: 4px;
 }
-
-a[href^="http"] {
-  color: #a66;
-  text-decoration: underline;
-}
-
