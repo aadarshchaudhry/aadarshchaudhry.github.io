@@ -1,13 +1,13 @@
 /* || General setup */
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
-  background-color: #dde;
+}
+
+html {
   font-size: 10px;
-  font-family: 'Open Sans Condensed', sans-serif;
-  color: #2a2a2a;
+  background-color: #dde;
 }
 
 body {
@@ -16,126 +16,111 @@ body {
   margin: 0 auto;
 }
 
-h1,
-h2,
-h3 {
+/* || typography */
+
+font[size="7"], font[size="6"], font[size="5"] {
   font-family: 'Sonsie One', cursive;
   color: #2a2a2a;
-  margin-top: 0;
-  text-align: center;
 }
 
-h1 {
-  font-size: 4rem;
-  color: white;
-  text-shadow: 2px 2px 10px black;
-  background-color: #9999cc;
-  padding: 1rem 0;
-  margin-bottom: 1rem;
-}
-
-h2 {
-  font-size: 3rem;
-}
-
-h3 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-}
-
-p,
-li,
-table,
-label,
-input {
-  font-size: 1.6rem;
-  line-height: 1.5;
+p, input, li, table, label {
+  font-family: 'Open Sans Condensed', sans-serif;
   color: #2a2a2a;
 }
 
-a {
-  color: blue;
-  text-decoration: underline;
+font[size="7"] {
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 10px black;
 }
 
-a:hover,
-a:focus {
-  text-decoration: none;
-  outline: 2px solid #333;
-}
-
-nav,
-article,
-footer,
-.secondary {
-  background-color: #4caf50;
-  padding: 10px 30px;
-  border-radius: 4px;
-}
-
-nav {
-  display: flex;
-  height: 50px;
-  margin-bottom: 10px;
-  align-items: center;
-}
-
-nav ul {
-  padding: 0;
-  list-style: none;
-  flex: 2;
-  display: flex;
-  margin: 0;
-}
-
-nav li {
-  flex: 1;
+font[size="6"] {
+  font-size: 3rem;
   text-align: center;
 }
 
-nav a {
-  display: block;
+font[size="5"] {
+  font-size: 2.2rem;
+}
+
+p, li, table {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* || header layout */
+
+div[class="nav"], article, footer, .secondary {
+  background-color: green;
+}
+
+article, footer, .secondary {
+  padding: 10px 30px;
+}
+
+article {
+  margin-right: 10px;
+}
+
+div[class="nav"] {
+  height: 50px;
+  background-color: ff80ff;
+  display: flex;
+  padding: 1% 0;
+  margin-bottom: 10px;
+}
+
+div[class="nav"] ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+}
+
+div[class="nav"] li {
+  display: inline;
+  text-align: center;
+  flex: 1;
+}
+
+div[class="nav"] a {
+  display: inline-block;
   font-size: 2rem;
   text-transform: uppercase;
   text-decoration: none;
   color: black;
-  padding: 10px 0;
 }
 
-nav a:focus,
-nav a:hover {
-  background-color: #357a38;
-  color: white;
-}
-
-nav .search {
+div[class="nav"] .search {
   flex: 1;
   display: flex;
   align-items: center;
+  height: 100%;
   padding: 0 2em;
 }
 
-.search input[type='search'] {
-  flex: 3;
-  height: 32px;
+.search input {
   font-size: 1.6rem;
-  padding: 0 0.5rem;
+  height: 32px;
 }
 
-.search input[type='submit'] {
+.search input[type="search"] {
+  flex: 3;
+}
+
+.search input[type="submit"] {
   flex: 1;
   margin-left: 1rem;
   background: #333;
-  border: none;
+  border: 0;
   color: white;
-  font-size: 1.6rem;
-  cursor: pointer;
-  padding: 0 1rem;
 }
+
+/* || main layout */
 
 main {
   display: flex;
-  gap: 1rem;
 }
 
 article {
@@ -148,64 +133,60 @@ article {
 
 footer {
   margin-top: 10px;
-  text-align: center;
-  font-size: 1.2rem;
 }
+
+/* Table styling */
 
 table {
   width: 100%;
   background-color: #dde;
   border-collapse: collapse;
-  margin-bottom: 1.5rem;
 }
 
-caption {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  text-align: left;
-}
-
-th,
-td {
+th, td {
   padding: 10px;
-  border: 1px solid #999;
+}
+
+td {
   text-align: center;
+}
+
+th[scope="col"] {
+  border-bottom: 1px solid black;
 }
 
 tbody tr:nth-child(odd) {
   background-color: #def;
 }
 
-img,
-audio {
+/* styling content images and audio */
+
+img, audio {
   display: block;
-  margin: 1rem auto;
-  max-width: 100%;
-  height: auto;
+  margin: 0 auto;
 }
 
 audio {
   width: 500px;
 }
 
+/* Comments styling */
+
 .comments {
   background-color: #def;
   padding: 10px;
-  border-radius: 4px;
-  margin-top: 1.5rem;
 }
 
 .show-hide {
   cursor: pointer;
-  font-size: 1.6rem;
-  line-height: 32px;
-  background: #333;
-  border: none;
-  color: white;
-  width: 150px;
-  margin: 0 auto 1rem auto;
-  display: block;
-  border-radius: 4px;
+}
+
+.comments font[size="6"] {
+  font-size: 2rem;
+}
+
+.comments font[size="6"]:nth-of-type(2) {
+  margin-bottom: 0;
 }
 
 .comment-form {
@@ -215,82 +196,55 @@ audio {
 .comment-form .flex-pair {
   display: flex;
   padding: 0 3rem 1rem;
-  align-items: center;
 }
 
 .comment-form label {
+  align-self: center;
   flex: 2;
   text-align: right;
-  padding-right: 1rem;
 }
 
-.comment-form input[type='text'] {
+.comment-form input {
   margin-left: 1rem;
   flex: 6;
-  padding: 0.25rem 0.5rem;
-  font-size: 1.6rem;
 }
 
-.comment-form input[type='submit'] {
+.show-hide {
+  text-align: center;
+  width: 150px;
+}
+
+.comment-form input, .comment-form label, .show-hide {
+  font-size: 1.6rem;
+  line-height: 32px;
+}
+
+.comment-form input[type="submit"], .show-hide {
+  background: #333;
+  border: 0;
+  color: white;
+}
+
+.comment-form input[type="submit"] {
   width: 30%;
   display: block;
   margin: 0 auto;
-  background: #333;
-  border: none;
-  color: white;
-  font-size: 1.6rem;
-  cursor: pointer;
-  border-radius: 4px;
 }
 
 .comment-container {
   margin-top: 0;
-  padding-left: 0;
 }
 
 .comment-container li {
-  list-style: none;
+  list-style-type: none;
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
 }
 
 .comment-container li p:nth-child(1) {
-  flex: 1 0 150px;
+  flex: 1;
   font-weight: bold;
-  margin: 0;
 }
 
 .comment-container li p:nth-child(2) {
-  flex: 5 1 300px;
-  margin: 0;
-}
-
-/* Utility class to hide visually but keep accessible for screen readers */
-.visually-hidden {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
-}
-
-/* Responsive adjustments */
-
-@media (max-width: 800px) {
-  main {
-    flex-direction: column;
-  }
-
-  nav ul {
-    flex-direction: column;
-    height: auto;
-  }
-
-  nav li {
-    flex: none;
-    margin-bottom: 0.5rem;
-  }
+  flex: 5;
 }
